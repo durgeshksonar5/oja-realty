@@ -2696,7 +2696,7 @@ header.main-header .header-sticky.active {
 /************************************/
 
 .our-blog {
-    padding: 120px 0 90px;
+    padding: 50px 0 35px;
 }
 
 .post-item {
@@ -9682,7 +9682,7 @@ header.main-header .header-sticky.active {
 }
 
 .about-us-prime {
-    padding: 120px 0;
+    padding: 120px 0 60px;
 }
 
 .about-us-image-box-prime {
@@ -9849,7 +9849,7 @@ header.main-header .header-sticky.active {
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: auto;
-    padding: 120px 0;
+    padding: 50px 0 40px;
 }
 
 .service-item-prime {
@@ -9970,7 +9970,7 @@ header.main-header .header-sticky.active {
 }
 
 .who-we-are-prime {
-    padding: 120px 0;
+    padding: 50px 0 70px;
 }
 
 .who-we-are-content-prime {
@@ -10151,12 +10151,12 @@ header.main-header .header-sticky.active {
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: auto;
-    padding: 120px 0 80px;
+    padding: 50px 0 25px;
 }
 
 .leader-item-prime {
-    height: calc(100% - 40px);
-    margin-bottom: 40px;
+    height: calc(100% - 20px);
+    margin-bottom: 20px;
 }
 
 .leader-item-image-prime {
@@ -10250,7 +10250,7 @@ header.main-header .header-sticky.active {
 }
 
 .our-key-fact-prime {
-    padding: 120px 0;
+    padding: 40px 0 60px;
 }
 
 .key-fact-image-prime {
@@ -10286,9 +10286,32 @@ header.main-header .header-sticky.active {
 
 .key-fact-item-prime {
     width: calc(50% - 15px);
-    background-color: var(--secondary-color);
+    background-color: #0C2745;
     border-radius: 10px;
     padding: 30px;
+    box-shadow: 0 10px 30px rgba(12, 39, 69, 0.08);
+    transition: all 0.3s ease-in-out;
+}
+
+.key-fact-item-prime:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(12, 39, 69, 0.2);
+}
+
+.key-fact-item-prime .key-fact-item-content-prime h3 {
+    color: var(--white-color);
+}
+
+.key-fact-item-prime .key-fact-item-content-prime p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.key-fact-item-prime .icon-box {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.key-fact-item-prime .icon-box::before {
+    background: #183e6b;
 }
 
 .key-fact-icon-box-prime .icon-box,
@@ -10462,7 +10485,7 @@ header.main-header .header-sticky.active {
 }
 
 .why-choose-us-prime {
-    padding: 120px 0;
+    padding: 50px 0 70px;
 }
 
 .why-choose-us-content-prime {
@@ -10621,7 +10644,7 @@ header.main-header .header-sticky.active {
 }
 
 .our-faqs-prime {
-    padding: 120px 0;
+    padding: 50px 0 70px;
 }
 
 .faq-contant-box-prime {
@@ -10806,7 +10829,7 @@ header.main-header .header-sticky.active {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: auto;
-    padding: 120px 0;
+    padding: 50px 0 70px;
 }
 
 .our-testimonials-content-prime {
@@ -10928,7 +10951,7 @@ header.main-header .header-sticky.active {
 
 .main-footer-prime {
     background-color: var(--primary-color);
-    padding: 120px 0 0;
+    padding: 30px 0 0;
 }
 
 .footer-header-box-prime {
@@ -10938,8 +10961,8 @@ header.main-header .header-sticky.active {
     justify-content: space-between;
     gap: 20px;
     border-bottom: 1px solid var(--dark-divider-color);
-    margin-bottom: 60px;
-    padding-bottom: 60px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
 }
 
 .footer-logo-prime {
@@ -11145,8 +11168,8 @@ header.main-header .header-sticky.active {
     justify-content: space-between;
     gap: 15px;
     border-top: 1px solid var(--dark-divider-color);
-    margin-top: 60px;
-    padding: 60px 0;
+    margin-top: 30px;
+    padding: 20px 0;
 }
 
 .footer-menu-prime ul {
@@ -11177,6 +11200,17 @@ header.main-header .header-sticky.active {
 .footer-copyright-text-prime p {
     color: var(--white-color);
     margin-bottom: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.footer-copyright-text-prime .footer-dev-logo {
+    max-height: 30px;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -11335,7 +11369,7 @@ header.main-header .header-sticky.active {
         padding: 60px 0;
     }
     .who-we-are-prime {
-        padding: 60px 0;
+        padding: 40px 0 50px;
     }
     .who-we-are-body-prime ul li:before {
         font-size: 16px;
@@ -11358,7 +11392,7 @@ header.main-header .header-sticky.active {
     }
     .our-leaders-prime {
         background-size: 150% auto;
-        padding: 60px 0 30px;
+        padding: 40px 0 30px;
     }
     .leader-item-prime {
         height: calc(100% - 30px);
