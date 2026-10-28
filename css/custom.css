@@ -1934,7 +1934,7 @@ header.main-header .header-sticky.active {
 /************************************/
 
 .our-awards {
-    padding: 120px 0;
+    padding: 50px 0 50px;
     background-image: url('../images/section-bg-image-3.png');
     background-position: bottom center;
     background-repeat: no-repeat;
@@ -2140,7 +2140,7 @@ header.main-header .header-sticky.active {
     background-repeat: no-repeat;
     background-position: right -300px center;
     background-size: auto;
-    padding: 120px 0;
+    padding: 50px 0 50px;
 }
 
 .testimonial-image-box {
@@ -2465,7 +2465,7 @@ header.main-header .header-sticky.active {
 /************************************/
 
 .our-faqs {
-    padding: 120px 0;
+    padding: 50px 0 50px;
 }
 
 .faqs-image-box {
@@ -3052,7 +3052,7 @@ header.main-header .header-sticky.active {
 }
 
 .our-approach {
-    padding: 120px 0;
+    padding: 50px 0 50px;
     background-image: url('../images/section-bg-image-1.png');
     background-repeat: no-repeat;
     background-position: bottom center;
@@ -3269,7 +3269,7 @@ header.main-header .header-sticky.active {
 }
 
 .our-progress {
-    padding: 120px 0;
+    padding: 50px 0 50px;
 }
 
 .progress-image-box {
@@ -3464,7 +3464,7 @@ header.main-header .header-sticky.active {
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: auto;
-    padding: 120px 0;
+    padding: 50px 0 50px;
 }
 
 .benefits-items-list {
@@ -5285,15 +5285,22 @@ header.main-header .header-sticky.active {
 /************************************/
 
 .page-contact-us {
-    padding: 120px 0;
+    padding: 50px 0 50px;
 }
 
 .contact-info-item {
-    background-color: var(--secondary-color);
+    background-color: #0C2745;
     border-radius: 10px;
     height: calc(100% - 30px);
     margin-bottom: 30px;
     padding: 40px;
+    box-shadow: 0 10px 30px rgba(12, 39, 69, 0.12);
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-info-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(12, 39, 69, 0.25);
 }
 
 .contact-info-item .icon-box {
@@ -5308,6 +5315,7 @@ header.main-header .header-sticky.active {
     margin-bottom: 30px;
     transition: all 0.4s ease-in-out;
     overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .contact-info-item .icon-box::before {
@@ -5317,7 +5325,7 @@ header.main-header .header-sticky.active {
     bottom: 0;
     right: 0;
     left: 0;
-    background: var(--accent-color);
+    background: #183e6b;
     width: 100%;
     height: 100%;
     transform: rotate(180deg) scale(0);
@@ -5343,10 +5351,12 @@ header.main-header .header-sticky.active {
 
 .contact-info-item-content h2 {
     font-size: 20px;
+    color: var(--white-color);
 }
 
 .contact-info-item-content p {
     margin: 10px 0 0;
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .contact-info-item-content ul {
@@ -5356,7 +5366,7 @@ header.main-header .header-sticky.active {
 }
 
 .contact-info-item-content ul li {
-    color: var(--primary-color);
+    color: var(--white-color);
     line-height: 1.5em;
     margin-bottom: 10px;
 }
@@ -5366,7 +5376,7 @@ header.main-header .header-sticky.active {
 }
 
 .contact-info-item-content ul li::marker {
-    color: var(--accent-color);
+    color: var(--accent-secondary-color);
 }
 
 .contact-info-item-content ul li a {
@@ -5375,7 +5385,7 @@ header.main-header .header-sticky.active {
 }
 
 .contact-info-item-content ul li a:hover {
-    color: var(--accent-color);
+    color: var(--accent-secondary-color);
 }
 
 .contact-image-form-box {
@@ -5994,7 +6004,7 @@ header.main-header .header-sticky.active {
     }
     .our-awards {
         background-size: 100% auto;
-        padding: 60px 0;
+        padding: 40px 0 35px;
     }
     .award-item {
         padding: 30px;
@@ -6026,7 +6036,7 @@ header.main-header .header-sticky.active {
         margin-top: 30px;
     }
     .our-testimonials {
-        padding: 60px 0;
+        padding: 40px 0 35px;
     }
     .testimonial-image-box {
         height: auto;
@@ -6076,7 +6086,7 @@ header.main-header .header-sticky.active {
         left: 30px;
     }
     .our-faqs {
-        padding: 60px 0;
+        padding: 40px 0 35px;
     }
     .faqs-cta-box-content h2,
     .faqs-cta-box-content h3 {
@@ -6140,7 +6150,7 @@ header.main-header .header-sticky.active {
         font-size: 44px;
     }
     .our-approach {
-        padding: 60px 0;
+        padding: 40px 0 35px;
     }
     .approach-item {
         padding: 30px;
@@ -6181,7 +6191,7 @@ header.main-header .header-sticky.active {
         font-size: 20px;
     }
     .our-progress {
-        padding: 60px 0;
+        padding: 40px 0 35px;
     }
     .opening-hour-box {
         bottom: 20px;
@@ -6198,7 +6208,7 @@ header.main-header .header-sticky.active {
     }
     .our-benefits {
         background-size: 150% auto;
-        padding: 60px 0;
+        padding: 40px 0 35px;
     }
     .benefits-item {
         padding: 20px;
@@ -6363,7 +6373,7 @@ header.main-header .header-sticky.active {
         margin-bottom: 40px;
     }
     .page-contact-us {
-        padding: 60px 0;
+        padding: 40px 0 35px;
     }
     .contact-info-item {
         padding: 20px;
