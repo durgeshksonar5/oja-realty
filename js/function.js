@@ -442,24 +442,64 @@
     });
 
     function submitForm() {
-        /* Ajax call to submit form */
+        var $btn = $contactform.find('button[type="submit"]');
+        var originalBtnHtml = $btn.html();
+        $btn.prop("disabled", true).html('<i class="fa-solid fa-spinner fa-spin"></i> Submitting...');
+
+        var fname = ($("#fname").val() || "").trim();
+        var lname = ($("#lname").val() || "").trim();
+        var fullName = (fname + " " + lname).trim();
+        var email = ($("#email").val() || "").trim();
+        var phone = ($("#phone").val() || "").trim();
+        var cleanPhone = phone.replace(/\D/g, "");
+        if (cleanPhone.length === 12 && cleanPhone.indexOf("91") === 0) cleanPhone = cleanPhone.substring(2);
+        if (cleanPhone.length === 11 && cleanPhone.indexOf("0") === 0) cleanPhone = cleanPhone.substring(1);
+        var message = ($("#message").val() || "").trim();
+
+        var payload = {
+            name: fullName,
+            fullName: fullName,
+            fname: fname,
+            lname: lname,
+            email: email,
+            phone: cleanPhone || phone,
+            number: cleanPhone || phone,
+            contact: cleanPhone || phone,
+            mobile: cleanPhone || phone,
+            msg: message,
+            message: message,
+            comments: message,
+            subject: "Website Contact Form Enquiry",
+            buttonType: "form",
+            type: "form",
+            source: "contact_page_form"
+        };
+
         $.ajax({
             type: "POST",
-            url: "form-process.php",
-            data: $contactform.serialize(),
-            success: function(text) {
-                if (text === "success") {
-                    formSuccess();
-                } else {
-                    submitMSG(false, text);
+            url: "https://leadsmanagment.hindustandigitalservices.com/api/forms/submit/8ae35fb5-dca9-40e4-b207-d63a36d800de",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            data: JSON.stringify(payload),
+            timeout: 12000,
+            success: function(response) {
+                $btn.prop("disabled", false).html(originalBtnHtml);
+                formSuccess();
+            },
+            error: function(xhr, status, error) {
+                $btn.prop("disabled", false).html(originalBtnHtml);
+                var errMessage = "Unable to submit your enquiry right now. Please call us at +91 78755 11119.";
+                if (xhr.responseJSON && xhr.responseJSON.error) {
+                    errMessage = xhr.responseJSON.error;
                 }
+                submitMSG(false, errMessage);
             }
         });
     }
 
     function formSuccess() {
         $contactform[0].reset();
-        submitMSG(true, "Message Sent Successfully!")
+        submitMSG(true, "Thank you! Your enquiry has been received. Our team will contact you shortly.");
     }
 
     function submitMSG(valid, msg) {
